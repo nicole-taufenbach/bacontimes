@@ -1,0 +1,154 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7.5vh;
+    background-color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    color: whitesmoke;
+}
+
+.header-title h4 {
+    color: rgba(245, 245, 245, 0.89);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.header-links {
+    display: flex;
+    /* background-color: red;
+    > não tem espaço, precisa aumentar */
+    width: 40%;
+    justify-content: space-around;
+}
+
+.header-links li {
+    list-style: none;
+}
+
+.header-links a {
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: rgba(245, 245, 245, 0.89);
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: rgba(245, 245, 245, 0.89);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+    .header-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+
+    .header-links {
+        position: absolute;
+        right: 0px;
+        height: 92.5vh;
+        top: 7.5vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .header-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.about,
+p {
+text-align: justify;
+font-family: 'Crimson Text', serif;
+font-size: 18px;
+}
+
+p.citacao {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10%;
+}
+
+.main-img {
+    max-width: 40%;
+    height: auto;
+    float: left;
+    margin-right: 1rem;
+    }
+
+.about {
+    margin: 0 auto;
+    width: 70%;
+}
